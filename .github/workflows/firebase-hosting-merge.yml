@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PETCON2 }}'
           channelId: live
           projectId: petcon2
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
