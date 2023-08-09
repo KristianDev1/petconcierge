@@ -16,16 +16,16 @@ const Nav: Component = () => {
             name: 'Services',
             link: '/services'
         },
-        {
-            id: 3,
-            name: 'Prices',
-            link: '/price'
-        },
-        {
-            id: 4,
-            name: 'Blog',
-            link: '/blog'
-        },
+        // {
+        //     id: 3,
+        //     name: 'Prices',
+        //     link: '/price'
+        // },
+        // {
+        //     id: 4,
+        //     name: 'Blog',
+        //     link: '/blog'
+        // },
         {
             id: 5,
             name: 'Shop',
@@ -75,7 +75,7 @@ const Nav: Component = () => {
                             <img src={Logo}  class="h-12"/>
                         </A>
                     </div>
-                    <div class="lg:flex gap-12 text-sm text-gray-600 hidden">
+                    <div class="lg:flex gap-12 text text-gray-600 hidden">
                         <For each={Links}>
                             {(i) => 
                                 <A href={i.link}

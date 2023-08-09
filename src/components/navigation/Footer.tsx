@@ -1,5 +1,6 @@
 import { Component } from "solid-js";
 import Logo from "../../assets/img/white_logo.png"
+import { A } from "@solidjs/router";
 
 const Footer: Component = () => {
     return (
@@ -14,11 +15,21 @@ const Footer: Component = () => {
                             Business
                         </h3>
                         <ul class="pt-3">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Services</li>
-                            <li>Prices</li>
-                            <li>Contact</li>
+                            <A href="/">
+                                <li>Home</li>
+                            </A>
+                            <A href="/about">
+                                <li>About</li>
+                            </A>
+                            <A href="/services">
+                                <li>Services</li>
+                            </A>
+                            <A href="/prices">
+                                <li>Prices</li>
+                            </A>
+                            <A href="/contact">
+                                <li>Contact</li>
+                            </A>
                         </ul>
                     </div>
                     <div class="w-1/3 sm:w-1/5">
@@ -26,7 +37,9 @@ const Footer: Component = () => {
                             Services
                         </h3>
                         <ul class="pt-3">
-                            <li>Grooming</li>
+                            <A href="/services/#grooming">
+                                <li>Grooming</li>
+                            </A>
                             <li>Sitting</li>
                             <li>Taxi</li>
                             <li>Walking</li>
@@ -39,6 +52,7 @@ const Footer: Component = () => {
                         <ul class="pt-3">
                             <li>Shop</li>
                             <li>Book Now</li>
+                            <li>Bloger</li>
                         </ul>
                     </div>
                     <div class="w-full sm:w-1/5">

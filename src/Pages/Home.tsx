@@ -11,6 +11,7 @@ import TaxiBig from "../assets/img/Taxi.jpg"
 import StoreBig from "../assets/img/Store.jpg"
 import GroomingBig from "../assets/img/Grooming.avif"
 import ConciergeBig from "../assets/img/Concierge.jpg"
+import Bestie from "../assets/img/besti.png"
 
 const Home = () => {
     return (
