@@ -73,7 +73,7 @@ const Nav: Component = () => {
                 <div class="items-center flex justify-between w-full lg:w-10/12 m-auto h-full">
                     <div>
                         <A href="/">
-                            <img src={Logo}  class="h-12"/>
+                            <img src={Logo}  class="h-11"/>
                         </A>
                     </div>
                     <div class="lg:flex gap-12 text text-gray-600 hidden">
