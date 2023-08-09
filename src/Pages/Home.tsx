@@ -20,7 +20,7 @@ const Home = () => {
             {/* <div class="w-full py-10 border-b">
 
             </div> */}
-            <div class="w-full bg-gray-50">
+            <div class="w-full bg-gray-50 scroll-smooth">
                 <div class="w-full sm:w-9/12 flex py-10 m-auto px-3">
                     <A href="#about" class="w-1/4 ">
                         <div class="w-full border-l hover:bg-gray-200">
@@ -76,7 +76,7 @@ const Home = () => {
                         at their level in respect to their unique 
                         personalities, likes and preferences in mind.
                     </p>
-                    <div class="w-full flex justify-center pt-10" id="about">
+                    <div class="w-full flex justify-center pt-10">
                         <A href="/about">
                             <button class="bg-blue-500 flex hover:bg-blue-600 h-10 text-white w-36 rounded-sm">
                                 <div class="w-11/12 flex m-auto h-full">
@@ -88,7 +88,7 @@ const Home = () => {
                         </A>
                     </div>
                 </div>
-                <div class="w-full px-6 sm:px-0 sm:w-10/12 flex flex-wrap py-8 sm:py-16 m-auto">
+                <div class="w-full px-6 sm:px-0 sm:w-10/12 flex flex-wrap py-8 sm:py-16 m-auto" id="about">
                     <div class="w-full sm:w-2/3">
                         <h1 class="text-5xl sm:text-6xl font-bold">Grooming</h1>
                         <p class="py-10 text-lg sm:pr-10">

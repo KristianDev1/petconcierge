@@ -24,9 +24,9 @@ const Footer: Component = () => {
                             <A href="/services">
                                 <li>Services</li>
                             </A>
-                            <A href="/prices">
+                            {/* <A href="/prices">
                                 <li>Prices</li>
-                            </A>
+                            </A> */}
                             <A href="/contact">
                                 <li>Contact</li>
                             </A>
@@ -37,12 +37,24 @@ const Footer: Component = () => {
                             Services
                         </h3>
                         <ul class="pt-3">
+                            <A href="/services/#concierge">
+                                <li>Concierge</li>
+                            </A>
                             <A href="/services/#grooming">
                                 <li>Grooming</li>
                             </A>
-                            <li>Sitting</li>
-                            <li>Taxi</li>
-                            <li>Walking</li>
+                            <A href="/services/#sitting">
+                                <li>Sitting</li>
+                            </A>
+                            <A href="/services/#traning">
+                                <li>Traning</li>
+                            </A>
+                            <A href="/services/#taxi">
+                                <li>Taxi</li>
+                            </A>
+                            <A href="/services/#walking">
+                                <li>Walking</li>
+                            </A>
                         </ul>
                     </div>
                     <div class="w-1/3 sm:w-1/5">

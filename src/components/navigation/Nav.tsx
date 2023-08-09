@@ -1,10 +1,11 @@
-import { Component, For } from "solid-js";
+import { Component, For, createSignal } from "solid-js";
 import {A} from "@solidjs/router";
 import Logo from "../../assets/img/logo.png"
-import { IoCall, IoLogoWhatsapp } from 'solid-icons/io'
+import { IoCall, IoCloseOutline, IoLogoWhatsapp, IoMenuOutline } from 'solid-icons/io'
 import { BiLogosFacebook } from 'solid-icons/bi'
 
 const Nav: Component = () => {
+    const [toggleMobileMenu, setToggleMobileMenu] = createSignal(false);
     const Links = [
         {
             id: 1,
@@ -87,12 +88,34 @@ const Nav: Component = () => {
                         </For>
                     </div>
                     <div>
-                        <A href="https://petconciergesa.simplybook.me">
+                        <A href="https://petconciergesa.simplybook.me" class="hidden sm:block">
                             <button class="bg-blue-500 hover:bg-blue-600 text-sm h-10 rounded-sm w-28 duration-200 ease-in-out text-white">
                                 Book Now
                             </button>
                         </A>
+                        <button
+                            onClick={() => setToggleMobileMenu(true)}
+                            class="sm:hidden"
+                        >
+                            <IoMenuOutline class="text-2xl"/>
+                        </button>
                     </div>
+                </div>
+            </nav>
+            <nav class={`${toggleMobileMenu() ? 'w-full' : 'w-0'} fixed bg-black bg-opacity-50 h-screen z-50 top-0 right-0`}>
+                <button 
+                    class="absolute left-5 top-5 text-white"
+                    onClick={() => setToggleMobileMenu(false)}
+                >
+                    <IoCloseOutline class="text-2xl"/>
+                </button>
+                <div class={`${toggleMobileMenu() ? 'w-8/12' : 'w-0'} bg-white absolute duration-500 ease-in-out h-screen right-0`}>
+                    <ul class="text-lg">
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Services</li>
+                        <li>Contact us</li>
+                    </ul>
                 </div>
             </nav>
         </>
