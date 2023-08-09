@@ -156,7 +156,7 @@ const Home = () => {
                             care of in their absence or when they require additional assistance.
                         </p>
                         <A href="https://petconciergesa.simplybook.me">
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-28 rounded-sm">Shop Now</button>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-40 rounded-sm">Schedule Now</button>
                         </A>
                     </div>
                 </div>
