@@ -107,25 +107,27 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div class="w-full px-6 sm:px-0 sm:w-10/12 flex flex-wrap-reverse py-16 m-auto" id="store">
+                <div class="w-full px-6 sm:px-0 sm:w-10/12 flex flex-wrap-reverse py-8 sm:py-16 m-auto" id="store">
                     <div class="w-full sm:w-1/3 h-96 bg-gray-100" style={{"background-image":`url(${StoreBig})`,"background-size":"cover"}}>
 
                     </div>
-                    <div class="w-full sm:w-2/3 pl-10">
+                    <div class="w-full sm:w-2/3 sm:pl-10">
                         <h1 class="text-5xl sm:text-6xl font-bold">Store</h1>
-                        <p class="py-10 text-lg pl-10 sm:pl-0">
+                        <p class="py-10 text-lg pl-0">
                             Your one-stop shop for all your furry friends' needs! Whether you have a 
                             loyal dog, a curious cat, a playful bird, or any other beloved pet, we've 
                             got you covered with an extensive range of high-quality products and exceptional 
                             customer service. Join the thousands of happy pet parents who have already 
                             experienced the convenience and joy of shopping with us. 
                         </p>
-                        <A href="https://petconcierge.shop.netcash.co.za/">
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-28 rounded-sm">Shop Now</button>
-                        </A>
+                        <div class="w-full flex justify-center sm:justify-start">
+                            <A href="https://petconcierge.shop.netcash.co.za/">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-28 rounded-sm">Shop Now</button>
+                            </A>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full px-3 sm:px-0 sm:w-10/12 flex flex-wrap py-16 m-auto" id="taxi">
+                <div class="w-11/12 px-3 sm:px-0 sm:w-10/12 flex flex-wrap py-16 m-auto" id="taxi">
                     <div class="w-full sm:w-2/3">
                         <h1 class="text-5xl sm:text-6xl font-bold">Taxi</h1>
                         <p class="py-10 text-lg sm:pr-10">
@@ -136,19 +138,21 @@ const Home = () => {
                             knowledge in handling animals. We pride ourselves to address 
                             any specific needs during transportation.
                         </p>
-                        <A href="https://petconciergesa.simplybook.me">
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-28 rounded-sm">Book A Ride</button>
-                        </A>
+                        <div class="w-full flex justify-center sm:justify-start">
+                            <A href="https://petconciergesa.simplybook.me">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-28 rounded-sm">Book A Ride</button>
+                            </A>
+                        </div>
                     </div>
                     <div class="w-full sm:w-1/3 h-96 bg-gray-100" style={{"background-image":`url(${TaxiBig})`,"background-size":"cover"}}>
 
                     </div>
                 </div>
-                <div class="w-full px-3 sm:px-0 sm:w-10/12 flex flex-wrap-reverse py-16 m-auto" id="concierge">
+                <div class="w-11/12 px-3 sm:px-0 sm:w-10/12 flex flex-wrap-reverse py-16 m-auto" id="concierge">
                     <div class="w-full sm:w-1/3 h-96 bg-gray-100" style={{"background-image":`url(${ConciergeBig})`,"background-size":"cover"}}>
 
                     </div>
-                    <div class="w-full sm:w-2/3 pl-10">
+                    <div class="w-full sm:w-2/3 sm:pl-10">
                         <h1 class="text-5xl sm:text-6xl font-bold">Concierge</h1>
                         <p class="py-10 text-lg sm:pr-10">
                             Our pet concierge will ensure that pets receive the care and attention they need while 
@@ -156,9 +160,11 @@ const Home = () => {
                             parents/owners to have peace of mind, knowing that their furry friends are well taken 
                             care of in their absence or when they require additional assistance.
                         </p>
-                        <A href="https://petconciergesa.simplybook.me">
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-40 rounded-sm">Schedule Now</button>
-                        </A>
+                        <div class="w-full flex justify-center sm:justify-start">
+                            <A href="https://petconciergesa.simplybook.me">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white h-10 w-40 rounded-sm">Schedule Now</button>
+                            </A>
+                        </div>
                     </div>
                 </div>
                 {/* <div class="px-4 w-full sm:w-6/12 flex relative m-auto sm:pb-16">  

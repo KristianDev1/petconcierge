@@ -1,11 +1,12 @@
 import { Component, For, createSignal } from "solid-js";
-import {A} from "@solidjs/router";
+import {A, useNavigate} from "@solidjs/router";
 import Logo from "../../assets/img/logo.png"
 import { IoCall, IoCloseOutline, IoLogoWhatsapp, IoMenuOutline } from 'solid-icons/io'
 import { BiLogosFacebook } from 'solid-icons/bi'
 
 const Nav: Component = () => {
     const [toggleMobileMenu, setToggleMobileMenu] = createSignal(false);
+    const navigate = useNavigate();
     const Links = [
         {
             id: 1,
@@ -17,16 +18,6 @@ const Nav: Component = () => {
             name: 'Services',
             link: '/services'
         },
-        // {
-        //     id: 3,
-        //     name: 'Prices',
-        //     link: '/price'
-        // },
-        // {
-        //     id: 4,
-        //     name: 'Blog',
-        //     link: '/blog'
-        // },
         {
             id: 5,
             name: 'Shop',
@@ -48,7 +39,30 @@ const Nav: Component = () => {
             id:2,
             icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256" width="18px" height="18px" fill-rule="nonzero"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.69922,0 -23,9.60156 -23,21.5c0,6.30078 2.89844,12.19922 8,16.30078v8.80078l8.60156,-4.5c2.09766,0.59766 4.19922,0.79688 6.39844,0.79688c12.69922,0 23,-9.59766 23,-21.5c0,-11.79687 -10.30078,-21.39844 -23,-21.39844zM27.30078,30.60156l-5.80078,-6.20312l-10.80078,6.10156l12,-12.69922l5.90234,5.89844l10.5,-5.89844z"></path></g></g></svg>,
         }
-    ]
+    ];
+
+    const handleMobileLink = (e: any) => {
+        if(e === '/'){
+            navigate('/')
+            setToggleMobileMenu(false);
+        }
+        if(e === '/about'){
+            navigate('/about')
+            setToggleMobileMenu(false);
+        }
+        if(e === '/services'){
+            navigate('/services')
+            setToggleMobileMenu(false);
+        }
+        if(e === '/shop'){
+            window.location = ('https://petconcierge.shop.netcash.co.za/') 
+            setToggleMobileMenu(false);
+        }
+        if(e === '/contact'){
+            navigate('/contact')
+            setToggleMobileMenu(false);
+        }
+    }
 
     return (
         <>
@@ -69,7 +83,7 @@ const Nav: Component = () => {
                     </div>
                 </div>
             </div>
-            <nav class="w-full px-4 border flex h-16 sticky top-0 bg-white z-50">
+            <nav class="w-full px-4 border flex h-16 sticky top-0 bg-white z-30">
                 <div class="items-center flex justify-between w-full lg:w-10/12 m-auto h-full">
                     <div>
                         <A href="/">
@@ -102,22 +116,50 @@ const Nav: Component = () => {
                     </div>
                 </div>
             </nav>
-            <nav class={`${toggleMobileMenu() ? 'w-full' : 'w-0'} fixed bg-black bg-opacity-50 h-screen z-50 top-0 right-0`}>
-                <button 
-                    class="absolute left-5 top-5 text-white"
-                    onClick={() => setToggleMobileMenu(false)}
-                >
-                    <IoCloseOutline class="text-2xl"/>
+            <div class={`${toggleMobileMenu() ? 'w-full' : 'w-0'} fixed top-0 left-0 h-screen overflow-hidden bg-opacity-70 bg-black z-40`}>
+                <button
+                    onClick={() => setToggleMobileMenu(false)} 
+                    class="z-50 text-white mt-5 ml-5">
+                    <IoCloseOutline class="text-3xl menuClose" 
+                    />
                 </button>
-                <div class={`${toggleMobileMenu() ? 'w-8/12' : 'w-0'} bg-white absolute duration-500 ease-in-out h-screen right-0`}>
-                    <ul class="text-lg">
-                        <li>Home</li>
-                        <li>About us</li>
-                        <li>Services</li>
-                        <li>Contact us</li>
-                    </ul>
+                <div class={`fixed ${toggleMobileMenu() ? 'w-[300px]' : 'w-0'} h-screen flex overflow-hidden duration-300 ease-in-out z-30 top-0 right-0 bg-black 2xl:hidden`}>
+                    <div class="w-10/12 relative mx-auto text-white">
+                        <ul class="">
+                            <button
+                                onClick={() => handleMobileLink('/')}
+                                class="w-full"
+                            >
+                                <li class="w-full py-4 border-b">Home</li>
+                            </button>
+                            <button
+                                onClick={() => handleMobileLink('/about')}
+                                class="w-full"
+                            >
+                                <li class="w-full py-4 border-b">About us</li>
+                            </button>
+                            <button
+                                onClick={() => handleMobileLink('/services')}
+                                class="w-full"
+                            >
+                                <li class="w-full py-4 border-b">Services</li>
+                            </button>
+                            <button
+                                onClick={() => handleMobileLink('/shop')}
+                                class="w-full"
+                            >
+                                <li class="w-full py-4 border-b">Shop</li>
+                            </button>
+                            <button
+                                onClick={() => handleMobileLink('/contact')}
+                                class="w-full"
+                            >
+                                <li class="w-full py-4">Contact us</li>
+                            </button>
+                        </ul>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </>
     )
 }

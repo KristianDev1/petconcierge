@@ -5,7 +5,7 @@ const About = () => {
         <>
             <GeneralHero url="https://images.unsplash.com/photo-1551902751-ec7d94221ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1546&q=80"/>
             <div class="py-16 flex flex-wrap w-full">
-                <div class="sm:w-10/12 m-auto">
+                <div class="w-11/12 sm:w-10/12 m-auto">
                     <div class="w-full px-4 flex flex-wrap">
                         <div class="w-full sm:w-2/3 sm:pr-14">
                             <h1 class="text-6xl font-bold">
@@ -43,7 +43,7 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full bg-red-100 sm:w-1/3 flex">
+                        <div class="w-full bg-red-100 sm:w-1/3 flex mt-10 sm:mt-0">
                             <div 
                                 class="w-full sm:w-96 h-96 m-auto"
                                 style={{"background-image": "url(https://images.unsplash.com/photo-1611649743829-1ed7c968cd05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=908&q=80)", "background-size":"cover"}}
@@ -53,9 +53,9 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div class="sm:w-10/12 m-auto pt-20">
+                <div class="w-11/12 sm:w-10/12 m-auto pt-20">
                     <div class="w-full px-4 flex flex-wrap-reverse">
-                        <div class="w-full sm:w-1/3 flex">
+                        <div class="w-full sm:w-1/3 flex mt-10 sm:mt-0">
                             <div 
                                 class="w-96 h-96 m-auto"
                                 style={{"background-image": "url(https://images.unsplash.com/photo-1608928586655-36b8e0abf78b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)", "background-size":"cover"}}
@@ -84,8 +84,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div class="sm:w-10/12 m-auto pt-20">
-                    <h1 class="text-6xl font-bold text-center px-28">
+                <div class="w-11/12 sm:w-10/12 m-auto pt-20">
+                    <h1 class="text-6xl font-bold text-center sm:px-28">
                     Wagging tails and rumbling purrs are the reasons we are in this industry.
                     </h1>
                 </div>
